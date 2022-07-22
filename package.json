@@ -1,0 +1,30 @@
+{
+    "name": "flyder_api",
+    "version": "0.1.0",
+    "description": "API Flyder",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx jest --silent --verbose  --forceExit --maxWorkers=1",
+        "clean": "rimraf build",
+        "build": "npm run clean && tsc",
+        "start": "npm run build && node build/src/index.js",
+        "dev": "nodemon src/index.ts"
+    },
+    "author": "TDLabs",
+    "devDependencies": {
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/morgan": "^1.9.3",
+        "@types/node": "^17.0.21",
+        "ts-node": "^10.2.1",
+        "typescript": "^4.6.2"
+    },
+    "dependencies": {
+        "axios": "^0.27.2",
+        "cors": "^2.8.5",
+        "express": "^4.18.1",
+        "morgan": "^1.10.0",
+        "mysql2": "^2.3.3",
+        "nodemon": "^2.0.19"
+    }
+}
